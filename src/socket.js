@@ -1,5 +1,5 @@
 import  {io} from "socket.io-client";
 
-const socket = io('localhost:8080');
+const socket = io('nodejs-production-0bf5.up.railway.app:8080');
 
 export default socket;
