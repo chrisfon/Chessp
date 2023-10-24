@@ -20,12 +20,12 @@ setFen(chess.fen());
 if (chess.isGameOver()){
   if(chess.isCheckmate()){
     setOver(
-       `Mate, ${chess.turn() === "w" ? "negro" : "blanco"} gano!`
+       `Mate, ${chess.turn() === "w" ? "Black" : "White"} gano!`
     );
   } else if (chess.isDraw()){
-    setOver('Empate');
+    setOver('Draw');
   }else{
-    setOver('Se termino')
+    setOver('Game Over')
   }
 
 }

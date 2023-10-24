@@ -17,7 +17,7 @@ const io = new Server(
 const rooms = new Map();
 
 io.on('connection',(socket) =>{
-    console.log(socket.id,'si se conecto');
+    console.log(socket.id,'Connection Successful to port 8080');
 
     socket.on('username', (username) => {
         console.log('username:', username);
@@ -45,14 +45,14 @@ io.on('connection',(socket) =>{
 
         if (!room){
             error = true;
-            message = 'No existe';
+            message = 'Room doesnt exist';
         }else if(room.length <= 0){
             error=true;
-            message = 'no hay nadie busq brete';
+            message = 'No players in lobby';
         
         }else if (room.length >= 2){
             error=true;
-            message = 'Se lleno. Aguantese.'
+            message = 'Game is full.'
         }
 
         if (error) {
@@ -108,6 +108,6 @@ socket.on("disconnect", ()=>{
 });
 
 server.listen(port, ()=>{
-console.log(`copiado`);
+console.log(`Data Recibida exitosamente.`);
 });
 

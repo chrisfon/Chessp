@@ -36,7 +36,7 @@ useEffect( () => {
     <Container>
       <CustomDialog 
       open = {!usernameSubmitted}
-      title="Como tu te llama?"
+      title="What's ur name?"
       contentText="Seleccione su nombre"
       handleContinue={
         ()=>{
